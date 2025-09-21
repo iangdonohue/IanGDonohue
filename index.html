@@ -2,15 +2,18 @@
 <html>
 <head>
   <style>
-    body {
-      margin: 0;
-      background: url('gitbackground.svg') no-repeat center top fixed;
-      background-size: contain; /* or use cover if you're fine with stretch */
-      height: 100vh;
-    }
+  html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden; /* prevents scrollbars */
+  background: url('gitbackground.svg') no-repeat center top fixed;
+  background-size: contain;
+}
+
 
     .link-box {
-      position: absolute;
+      position: absoluate;
       top: 740px;     /* Adjust to line up with red box */
       left: 940px;    /* Adjust to align right side of layout */
       width: 350px;   /* Width of your red box */
@@ -50,3 +53,4 @@
 
 </body>
 </html>
+
