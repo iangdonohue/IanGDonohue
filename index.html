@@ -1,38 +1,27 @@
 <style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    overflow: hidden;
-    background: url('gitbackground.svg') no-repeat center top fixed;
-    background-size: contain;
-  }
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  background: url('gitbackground.svg') no-repeat center top fixed;
+  background-size: contain;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
 
-<div class="link-box">
-  <a href="https://yourgithub.com/OSINT">OSINT Lab</a><br>
-  <a href="https://yourgithub.com/CVENotes">CVE Notes</a><br>
-  <a href="https://yourmedium.com">Medium Blog</a>
-</div>
-
-  .link-box {
-    position: absolute;
-    top: 230px;    /* ← Adjust this */
-    left: 680px;   /* ← Adjust this */
-    width: 180px;
-    height: auto;
-    background: transparent;
-    color: white;
-    font-family: sans-serif;
-  }
-
-  .link-box a {
-    color: #00ffff; /* Or whatever you want */
-    text-decoration: none;
-    display: block;
-    margin: 4px 0;
-  }
-
-  .link-box a:hover {
-    text-decoration: underline;
-  }
+#links {
+  grid-column: 2;
+  grid-row: 2;
+  padding-left: 100px; /* tweak */
+  padding-top: 200px;  /* tweak */
+  z-index: 999;
+}
 </style>
+
+<div id="links">
+  <ul>
+    <li><a href=https://scriptkiddiemagazine.github.io/">Script Kiddie Magazine</a></li>
+    <li><a href="CVE-Notes/">CVE Notes</a></li>
+  </ul>
+</div>
