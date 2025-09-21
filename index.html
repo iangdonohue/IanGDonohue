@@ -1,25 +1,52 @@
-<div class="link-box">
-  <a href="OSINT/">OSINT Lab</a><br>
-  <a href="CVE-Notes/">CVE Notes</a><br>
-  <a href="https://medium.com/@iangdonohue">Medium Blog</a>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>iangdonohue.github.io</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      overflow: hidden;
+    }
 
-.link-box {
-  position: absolute;
-  top: 740px;   /* controls vertical (down) */
-  left: 1020px; /* controls horizontal (right) */
-  width: 200px;
-  font-family: sans-serif;
-  color: white;
-  z-index: 999;
-  background: transparent;
-}
+    body {
+      background: url('gitbackground.svg') no-repeat center top;
+      background-size: contain;
+      background-color: black;
+      font-family: sans-serif;
+    }
 
-.link-box a {
-  color: #00f0ff;
-  text-decoration: none;
-}
+    .link-box {
+      position: fixed;
+      bottom: 60px; /* distance from bottom */
+      right: 80px;  /* distance from right */
+      z-index: 999;
+      background: rgba(255, 255, 255, 0.1); /* TEMPORARY, remove later */
+      padding: 10px;
+      border-radius: 6px;
+    }
 
-.link-box a:hover {
-  text-decoration: underline;
-}
+    .link-box a {
+      display: block;
+      color: #00ffff;
+      text-decoration: none;
+      margin: 4px 0;
+    }
+
+    .link-box a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="link-box">
+    <a href="OSINT/">OSINT Lab</a>
+    <a href="CVE-Notes/">CVE Notes</a>
+    <a href="https://medium.com/@iangdonohue" target="_blank">Blog</a>
+  </div>
+
+</body>
+</html>
