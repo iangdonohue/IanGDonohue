@@ -2,48 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Ian Donohue | Cybersecurity</title>
+  <title>Custom Overlay Box</title>
   <style>
     body {
       margin: 0;
-      background-image: url("githubbackground.png");
+      padding: 0;
+      background: url('gitbackground.svg') no-repeat center center fixed;
       background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      height: 100vh;
+      font-family: Arial, sans-serif;
     }
 
-    .linkbox {
+    /* ✅ Overlay container */
+    .info-box {
       position: absolute;
-      cursor: pointer;
+      top: 20%;         /* 👈 Y position — adjust as needed */
+      left: 65%;        /* 👈 X position — adjust as needed */
+      width: 300px;     /* 👈 box width */
+      height: 200px;    /* 👈 box height */
+      background-color: rgba(0, 0, 0, 0.75); /* translucent black */
+      border: 2px solid #00ffff;
+      border-radius: 12px;
+      color: white;
+      padding: 20px;
+      z-index: 1000;
     }
 
-    /* Adjust these positions based on pixels */
-    .github-link {
-      top: 630px;
-      left: 860px;
-      width: 480px;
-      height: 60px;
+    a {
+      color: #00ffff;
+      text-decoration: none;
     }
 
-    .linkedin-link {
-      top: 30px;
-      left: 850px;
-      width: 480px;
-      height: 70px;
-    }
-
-    .blog-link {
-      top: 480px;
-      left: 850px;
-      width: 480px;
-      height: 130px;
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <a class="linkbox github-link" href="https://github.com/igdonohue" target="_blank"></a>
-  <a class="linkbox linkedin-link" href="https://www.linkedin.com/in/ian-donohue" target="_blank"></a>
-  <a class="linkbox blog-link" href="https://yourblogurl.com" target="_blank"></a>
+
+  <!-- ✅ Your overlay box -->
+  <div class="info-box">
+    <h3>My Tools</h3>
+    <ul>
+      <li><a href="https://github.com/iangdonohue/my-osint-lab" target="_blank">OSINT Lab</a></li>
+      <li><a href="https://github.com/iangdonohue/cve-notes" target="_blank">CVE Notes</a></li>
+      <li><a href="https://medium.com/@iangdonohue" target="_blank">Medium Blog</a></li>
+    </ul>
+  </div>
+
 </body>
 </html>
