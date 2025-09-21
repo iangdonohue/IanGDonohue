@@ -1,8 +1,25 @@
-<img src="gitbackground.svg" usemap="#nav-map" style="width: 100%; height: auto;" />
+<div class="link-box">
+  <a href="OSINT/">OSINT Lab</a><br>
+  <a href="CVE-Notes/">CVE Notes</a><br>
+  <a href="https://medium.com/@iangdonohue">Medium Blog</a>
+</div>
 
-<map name="nav-map">
-  <area shape="rect" coords="960,745,1270,830" href="OSINT/" alt="OSINT Lab">
-</map>
+.link-box {
+  position: absolute;
+  top: 740px;   /* controls vertical (down) */
+  left: 1020px; /* controls horizontal (right) */
+  width: 200px;
+  font-family: sans-serif;
+  color: white;
+  z-index: 999;
+  background: transparent;
+}
 
+.link-box a {
+  color: #00f0ff;
+  text-decoration: none;
+}
 
-
+.link-box a:hover {
+  text-decoration: underline;
+}
