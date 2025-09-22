@@ -1,68 +1,68 @@
-from pathlib import Path
-
-# Mobile-friendly HTML layout with responsive background and bottom link panel
-html_code = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>iangdonohue.github.io</title>
+  <meta charset="UTF-8">
+  <title>Ian G Donohue | Portfolio</title>
   <style>
-    * {
+    html, body {
       margin: 0;
-      padding: 0;
+      padding: 0 0 70px 0; /* bottom padding for red bar */
+      font-family: monospace;
+      background: url('gitbackground.svg') no-repeat center top;
+      background-size: cover;
+      color: white;
+    }
+
+    .link-bar {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: red;
+      color: white;
+      padding: 10px;
+      font-weight: bold;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
       box-sizing: border-box;
     }
 
-    body {
-      background: url('gitbackground.svg') no-repeat center top;
-      background-size: cover;
-      font-family: monospace;
+    a {
       color: white;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-    }
-
-    .link-panel {
-      background: rgba(255, 0, 0, 0.9);
-      padding: 16px;
-      text-align: center;
-      box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.7);
-    }
-
-    .link-panel a {
-      color: white;
-      margin: 0 12px;
       text-decoration: none;
-      font-weight: bold;
-      font-size: 1rem;
     }
 
-    .link-panel a:hover {
-      color: #00ff99;
+    a:hover {
       text-decoration: underline;
     }
 
-    @media (max-width: 600px) {
-      .link-panel a {
-        display: block;
-        margin: 8px 0;
-        font-size: 1.1rem;
+    .content {
+      padding: 20px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .link-bar {
+        font-size: 14px;
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="link-panel">
-    <a href="https://badbuoys.github.io">Bad Buoys DIY Maritime Drone</a>
-    <a href="https://www.amazon.com/Ian-Donohue-ebook/dp/B0FC8V842D?language=en_US">Greeble Spaceman's guide to OSI model </a>
-    <a href="https://medium.com/@iangdonohue" target="_blank">Medium posts ( Gremlin's Guide to ICS, "You made my ship list", etc)</a>
-    <a href="https://scriptkiddiemagazine.github.io">Script Kiddie Magazine</a>
 
+  <div class="content">
+    <!-- Any text or future content here -->
   </div>
+
+  <div class="link-bar">
+    <a href="https://badbuoys.github.io">Bad Buoys DIY Maritime Drone</a>
+    <a href="#">Greeble Spaceman's guide to OSI model</a>
+    <a href="#">Medium posts (Gremlin's Guide to ICS, etc)</a>
+    <a href="https://scriptkiddiemagazine.github.io">Script Kiddie Magazine</a>
   </div>
+
 </body>
 </html>
